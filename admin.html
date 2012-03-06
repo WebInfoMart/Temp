@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+	<title>Adminium - Modern Admin Panel Interface</title>
+	
+	<meta name="description" content="." />
+	<meta name="keywords" content="." />
+		
+	<style type="text/css" media="all">
+	@import url("css/style.css");
+	@import url("css/visualize.css");
+	@import url("css/date_input.css");
+	@import url("css/jquery.minicolors.css");
+	@import url("css/jquery.wysiwyg.css");
+	@import url("css/jquery.fancybox.css");
+	@import url("css/tipsy.css");
+	@import url("css/admin.css");
+	</style>
+	
+	<!--[if lt IE 9]>
+	<style type="text/css" media="all"> @import url("css/ie.css"); </style>
+	<![endif]-->
+
+</head>
+
+
+
+
+<body>
+
+
+	<div id="header">
+	
+		<h1><a href="#">ADMINIUM</a></h1>
+		
+		<form action="" method="post" class="searchform">
+			<input type="text" class="text" value="Search..." />
+			<input type="submit" class="submit" value="" />
+		</form>
+		
+		
+		<div class="userprofile">
+			<ul>
+				<li><a href="#"><img src="images/avatar.gif" alt="" /> enstyled</a>
+					<ul>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Messages</a></li>
+						<li><a href="index.html">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>		<!-- .userprofile ends -->
+			
+	</div>			<!-- #header ends -->
+	
+		<div id="sidebar">
+	
+		<ul id="nav">
+			<li><a href="#"><strong><img src="images/nav/dashboard.png" alt="" /> Dashboard</strong></a></li>
+			<li><a href="#"><img src="images/nav/pages.png" alt="" /> Pages</a></li>
+			<li><a href="#" class="collapse"><img src="images/nav/media.png" alt="" /> Media</a>
+				<ul>
+					<li><a href="#">Photos</a></li>
+					<li><a href="#">Video</a></li>
+					<li><a href="#">Audio</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><img src="images/nav/calendar.png" alt="" /> Calendar</a></li>
+			<li><a href="#"><img src="images/nav/users.png" alt="" /> Users</a>
+				<ul>
+					<li><a href="#">Add new user</a></li>
+					<li><a href="#">User groups</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><img src="images/nav/settings.png" alt="" /> Settings</a></li>
+			<li><a href="#"><span>12</span> <img src="images/nav/support.png" alt="" /> Support</a></li>
+		</ul>
+		
+		
+		<div class="status_box">
+			<ul>
+				<li><a href="#" class="online" title="Online">Web server 1</a></li>
+				<li><a href="#" class="online" title="Online">Web server 2</a></li>
+				<li><a href="#" class="warning" title="Warning">DB server</a></li>
+				<li><a href="#" class="offline" title="Offline">Mail server</a></li>
+			</ul>
+		</div>
+		
+	</div>		<!-- #sidebar ends -->
+	<div id="content">
+		
+		<div class="breadcrumb">
+			<a href="#">Adminium</a> &raquo; <a href="#">Section title</a> &raquo; <a href="#">Subsection title</a> &raquo; <a href="#">Page title</a>
+		</div>	
+		<div class="span8">
+			<div id="steps">
+				<div class="step first active">
+					<div class="num"><h3>1</h3></div>
+					<div class="name"><h3>Sign Up</h3></div>
+					<img src="http://apply.learnhub.com/layouts/default/images/dark_arrow.png" width="19" height="50" alt="Grey Arrow">
+				</div>
+				
+				<div class="step first">
+					<div class="num margin_l2"><h3>2</h3></div>
+					<div class="name"><h3>Privileges</h3></div>
+					<img src="http://apply.learnhub.com/layouts/default/images/grey_arrow.png" width="19" height="50" alt="Grey Arrow">
+				</div>
+			</div>
+			<div class="form">
+				<form action="" method="post">
+					<ul>
+						<li>
+							<div class="span3">
+								<label>MANAGE EVENTS</label>
+							</div>
+							<div class="span5">
+								<div class="span1">VIEW</div>
+								<div class="span1">EDIT</div>
+								<div class="span1">INSERT</div>
+								<div class="span1">DELETE</div>
+								
+							</div>
+						<div class="clearfix"></div>
+						</li>
+						<li>
+							<div class="span3">
+								<label>MANAGE EVENTS</label>
+							</div>
+							<div class="span5">
+								<div class="span1"><p class="onoffswitch">
+								<span class="onoff_box" style="background-position-x: 0px; "><input type="checkbox" class="onoffbtn"></span>
+								</p>
+								</div>
+								<div class="span1"><p class="onoffswitch">
+									<span class="onoff_box checked"><input type="checkbox" class="onoffbtn" checked="checked"></span>
+									</p>
+								</div>
+								<div class="span1"><p class="onoffswitch">
+									<span class="onoff_box checked"><input type="checkbox" class="onoffbtn" checked="checked"></span>
+									</p>
+								</div>
+								<div class="span1"><p class="onoffswitch">
+									<span class="onoff_box checked"><input type="checkbox" class="onoffbtn" checked="checked"></span>
+									</p>
+								</div>
+								
+							</div>
+						<div class="clearfix"></div>
+						</li>
+					</ul>
+						<input type="submit" class="submit" value="Submit">
+				</form>		
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.8.16/jquery-ui.min.js"></script>
+	
+	
+	<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+	<script type="text/javascript" src="js/jquery.date_input.min.js"></script>
+	<script type="text/javascript" src="js/jquery.minicolors.min.js"></script>
+	<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
