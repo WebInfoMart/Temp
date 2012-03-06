@@ -1,4 +1,16 @@
+.span1{width:130px}
+.span3{width:250px}
+.span5{width:600px}
+.span6{width:450px}
 .span8{width:960px}
+.admin{width:600px}
+/******************************margin**************************/
+.margin{margin:10px;}
+.margin_t{margin-top:10px;}
+.margin_l1{margin-left:10px;}
+.margin_l3{margin-left:30px;}
+.text_dec{text-decoration:line-through}
+
 #steps {
 margin-bottom: 15px;
 margin-top: 20px;
@@ -49,9 +61,9 @@ padding-left: 5px;
 background: #8B8B8B;
 color: white;
 }
-.admin{width:600px}
 .margin_l2{margin-left:60px;}
-.span1{width:130px}
-.span3{width:250px}
-.span5{width:600px}
-.span6{width:450px}
+#content h5 {
+line-height: 24px;
+}
+.orange{color: #F89406!important;}
+.light{color:#666!important;}
