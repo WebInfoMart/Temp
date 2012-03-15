@@ -22,6 +22,7 @@
 .margin_le{margin:0px 13px}
 .padding_lefty{padding:0px 10px;}
 .margin_t7{margin:5px 10px}
+.margin_r2{margin-right:20px}
 
 /**************************width******************************/
 .span61{width:490px}
@@ -47,6 +48,8 @@
 .span18{width:400px;}
 .span67{width:100px}
 .span78{width:530px;}
+.span44{width: 819px;}
+.span85{width:120px;}
 /***********************basic**********************************/
 .text_align{text-align:center;}
 .text_dec{text-decoration:line-through}
@@ -330,11 +333,7 @@ color: #08C;}
 }
 .margin_t50{margin-top: 53px\0/IE8+9; /* IE8 + 9 + IE10pp4  */
 }
-
-
-
 .letter_uni{padding:15px 10px 0px 10px;}
-
 .letter_uni div::first-letter {
 color: #f89406;
 font-size: 266%;
@@ -345,4 +344,57 @@ float: left;
 .letter_uni div span{color: #f89406;line-height:16px;}
 .letter_uni div{color:#333;
 font-size:194%}
+/******************************colleges***********************************/
+#scrollbar1 { width:150px; }
+#scrollbar1 .viewport { width: 115px; height: 100px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar1 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 8px; }
+#scrollbar1 .track {background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:6px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width:4px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:2px; }
+#scrollbar1 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar1 .disable { display: none; }
+#scrollbar2 { width:150px; }
+#scrollbar2 .viewport { width: 115px; height: 100px; overflow: hidden; position: relative; }
+#scrollbar2 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar2 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 8px; }
+#scrollbar2 .track {background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:6px; position: relative; padding: 0 1px; }
+#scrollbar2 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width:4px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:2px; }
+#scrollbar2 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar2 .disable { display: none; }
+#scrollbar3 { width:150px; }
+#scrollbar3 .viewport { width: 115px; height: 100px; overflow: hidden; position: relative; }
+#scrollbar3 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar3 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 8px; }
+#scrollbar3 .track {background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:6px; position: relative; padding: 0 1px; }
+#scrollbar3 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width:4px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:2px; }
+#scrollbar3 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar3 .disable { display: none; }
+#scrollbar4 { width:150px; }
+#scrollbar4 .viewport { width: 115px; height: 100px; overflow: hidden; position: relative; }
+#scrollbar4 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar4 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 7px; }
+#scrollbar4 .track {background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:5px; position: relative; padding: 0 1px; }
+#scrollbar4 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width:3px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:2px; }
+#scrollbar4 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar4 .disable { display: none; }
+#scrollbar5 { width:150px; }
+#scrollbar5 .viewport { width: 115px; height: 100px; overflow: hidden; position: relative; }
+#scrollbar5 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; }
+#scrollbar5 .scrollbar{ background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 7px; }
+#scrollbar5 .track {background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:5px; position: relative; padding: 0 1px; }
+#scrollbar5 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width:3px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:2px; }
+#scrollbar5 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar5 .disable { display: none; }
+.college_box ul{list-style:none;margin-left: 10px;}
+.college_box ul li{margin-top:10px;}
+.college_box ul li a{font-size: 14px;color:#333;}
+.last_view a{font-size:14px;color: #528310;font-weight: bold;}
+.last_view a:hover{color:#3881AB}
 
+/****************************model********************************/
+.model_back{}
+.model_heading{background-color:#B0D743;}
+.model_heading h3{color:#fff;}
+.model_body_height{min-height:150px;margin: 15px 0px;}
+.model_body_height select{width:160px;}
+.model_body_height form{width:350px;margin-left:auto;margin-right:auto;}
