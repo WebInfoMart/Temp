@@ -4,7 +4,23 @@
 .span6{width:450px}
 .span8{width:960px}
 .admin{width:600px}
+[class*="span"] {
+float: left;
+margin-left: 20px;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.center{text-align:center;}
+.float_l{float:left}
+.float_r{float:right}
 /******************************margin**************************/
+.margin_zero{margin:0px!important}
 .margin{margin:10px;}
 .margin_t{margin-top:10px;}
 .margin_l1{margin-left:10px;}
@@ -67,3 +83,17 @@ line-height: 24px;
 }
 .orange{color: #F89406!important;}
 .light{color:#666!important;}
+.blue{color:#0888C3!important;}
+
+
+/***************************caption**********************/
+.img_width{width:125px;height:60px;}
+.text_box{height: 50px;}
+.caption_form ul li{margin-bottom:20px;}
+
+
+
+
+
+/*******************create university***********************/
+.logo_img{width:60px;height:60px;}
