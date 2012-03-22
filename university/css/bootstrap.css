@@ -135,6 +135,7 @@ a:hover {
   float: left;
   margin-left: 20px;
 }
+.span9-1{width:740px;}
 .span1 {
   width: 60px;
 }
@@ -162,6 +163,7 @@ a:hover {
 .span9 {
   width: 700px;
 }
+
 .span10 {
   width: 780px;
 }

@@ -11,19 +11,8 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/style_sh.css">
-<script src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
-<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-alerts.js"></script>
-<script type="text/javascript" src="js/bootstrap-modal.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
- $('#pulse').click(function(){
-$('#myModal').modal('toggle');});
- });
-
-</script>
 </head>
+
 <body>
 	<header>
 		<div class="header_bar">	
@@ -74,53 +63,42 @@ $('#myModal').modal('toggle');});
 	<div>
 		<div class="body_bar"></div>
 		<div class="body_header"></div>
-		<div class="body">
-			<div>
-				<a data-toggle="modal" href="#myModal" id="pulse"><span class="orange">+  Invite Friends</span></a>
-				<div id="myModal" class="model_back modal hide fade" style="display: none; ">
-					<div class="modal-header no_border model_heading">
-						<a class="close" data-dismiss="modal">x</a>
-						<h3>Your Profile Information</h3>
+		<div class="body_container">
+			<div class="row show-grid">
+				<div class="span13">
+					<div class="alert alert-message message" data-alert="alert">
+						<a class="close" data-dismiss="alert">&times;</a>
+						<div>
+							<div class="float_l"><h2>Welcome! Let&#8217;s get started by</h2></div>
+							<div class="float_r close_cont"> <span> Don't want our help? </span> Close Tips </div>
+							<div class="clearfix"></div>
+						</div>
+						<nav id="help-tools">
+							<ul>
+								<li class="text_dec">1) Step 1</li>
+								<li><a href="#">2) Step 2</a></li>
+								<li><a href="#">3) Step 3</a></li>
+								<li><a href="#">4) Step 4</a></li>
+							</ul>
+						</nav>
 					</div>
-					<div class="modal-body model_body_height">
-						<form>
-							<div>
-								<div class="float_l span15 margin_zero"><img src="images/user_model.png"></div>
-								<div class="float_l span15 margin_l"><h4>Upload Your Picture</h4><div class="span15 margin_zero"><button class="model_btn" href="#">Choose File</button>No file Chosen</span></div></div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="margin_t">
-								<div class="float_l span15 margin_zero"><h4>Gender</h4></div>
-								<div class="float_l span2 margin_l"><input type="radio" name="sex" value="male" /> Male
-									<input type="radio" name="sex" value="female" /> Female</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="margin_t">
-								<div class="float_l span15 margin_zero"><h4>Current Educational level</h4></div>
-								<div class="float_l span2 margin_l"><div class="controls">
-									<input type="text" class="input-medium" id="input01">
-								</div></div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="margin_t">
-								<div class="float_l span15 margin_zero"><h4>Area of Interest</h4></div>
-								<div class="float_l span2 margin_l">
-									<div class="controls">
-									<select id="select01">
-										<option>Business</option>
-										<option>Arts</option>
-										<option>Science</option>
-										<option>Engineering</option>
-										<option>Psychology</option>
-									</select>
-									</div>
+					<div>
+						<div class="span111 margin_zero">
+							<div class="step_box">
+								<div class="span8 margin_zero">
+									<h1>Universities & College Programs to Choose!</h1>
+										<div class="margin_t">
+											<h2>Buckinghamshire New University</h2>
+											
+										</div>
 								</div>
-								<div class="clearfix"></div>
+									<div class="clearfix"></div>
 							</div>
-							<div class="margin_t">
-								<button class="btn btn-primary" href="#">Continue</button>
-							</div>
-						</form>
+						</div>
+						<div class="span15 float_r">
+							<img src="images/banner_img.png">
+						</div>
+					<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>

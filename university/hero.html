@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!-- Le styles -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="js/bootstrap-twipsy.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css" media="all" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style_sh.css">
+<script src="js/less-1.1.4.min.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-alerts.js"></script>
+<script src="js/bootstrap-tabs.js"></script>
+<script src="js/bootstrap-buttons.js"></script>
+<script type="text/javascript">
+    $('.btn').button('complete');
+	
+	
+	
+</script>
+<script type="text/javascript">
+$(function () {
+$('.enter-roomeo').tabs();
+})
+</script>
+<link href="lightbox.css" rel="stylesheet">
+<link href="login.css" rel="stylesheet">
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<style type="text/css">
+body {
+	padding-top: 40px;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <p class="pull-left" > Welcome to the Roomeo dashboard, <span class="blogger">Van Tucker.</span></p>
+      <div class="pull-right">
+        <ul class="nav">
+          <li><a href="#">Call Us 855-276-6636 </a></li>
+          <li class="active"><a href="#"> Messages(2) </a></li>
+          <li><a href="#"> Invite Roomates </a></li>
+          <li><a href="#"> F.A.Q. </a></li>
+          <li><a href="#"> Need Help?</a></li>
+          <li data-dropdown="dropdown" > <a href="#" class="dropdown-toggle"> My Account </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Secondary link</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Another link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="roomeo-top-nav">
+  <div class="container">
+    <div class="row">
+      <div class="span16" id="navigation-top">
+        <div id="topbar"> </div>
+        <h1 id="logo"><a href="#">ROOMEO</a></h1>
+        <nav id="roomeo-nav">
+          <ul class="unstyled">
+            <li class="active"> <a href="#"> Home </a> </li>
+            <li> <a href="#"> Expenses </a> </li>
+            <li> <a href="#"> Discussions </a> </li>
+            <li> <a href="#"> To Do's </a> </li>
+            <li> <a href="#"> Calendar </a> </li>
+            <li> <a href="#"> Checkout </a> </li>
+            <li data-dropdown="dropdown" > <a href="#" class="dropdown-toggle"><img src="images/user.png" width="26" height="26" alt="van"> My Account </a>
+              <ul class="dropdown-menu user" style="position:absolute;">
+                <li><a href="#">Secondary link</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Another link</a></li>
+              </ul>
+            </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="body-bg">
+  <div class="container">
+    <div class="clear"></div>
+    <div class="row">
+      <div class="span16" id="tips">
+        <div class="alert-message block-messwage fade in warning tips" data-alert="alert"> <a class="close" href="#">×</a>
+          <header>
+            <div class="pull-left">
+              <h2> Welcome! Let’s get started by <span> inviting some roommates! </span></h2>
+            </div>
+            <div class="pull-right" style="margin-right:10px;">Don't want our help? <span> Close Tips </span></div>
+          </header>
+          <div class="clear"></div>
+          <nav id="help-tools">
+            <ul>
+              <li class="done">1) Invite Roommates</li>
+              <li><a href="#">2) Add a photo of yourself</a></li>
+              <li><a href="#">3) Add Bank Info</a></li>
+              <li><a href="#">4) Add a Bill (Rent?)</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!---Sidebar and content start here-->
+    <div class="row">
+      <!--Sidebar-->
+      <div class="span4" id="sidebar"><img src="images/sidebar.jpg" width="219" height="1329"></div>
+      <!--End Sidebar-->
+      <div class="span12" id="overview-main">
+        <div class="box-gray-container">
+          <section>
+            <h3><span class="blue-active">Expenses</span> / Add Share Bills</h3>
+            <article>
+              <div class="clear"></div>
+              <div class="login-signup-area" id="share-bill-area">
+              <div class="clear"></div>
+                <div id="left-block">
+                  <label>Title <br>
+                    <input id="" class="span5" type="text" name="">
+                  </label>
+                  <label>Description <br>
+                    <input id="" class="span5" type="text" name="">
+                  </label>
+                  <label>Category <br>
+                    <select id="stackedSelect" name="stackedSelect" class="span5">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </label>
+                  <div style="clear:both"></div>
+                  <label style="font-weight:bold; font-size:11px;">Does this bill Repeat <br>
+                    <input name="" type="radio" value="">
+                    Never
+                    <input name="" type="radio" value="">
+                    Weekly
+                    <input name="" type="radio" value="">
+                    Monthly
+                    <input name="" type="radio" value="">
+                    Yearly </label>
+                </div>
+                <div id="left-block" style="float:right;">
+                  <div style="clear:both"></div>
+                  <div class="pull-right" style="font-size:18px;">
+                    <label> Total Amount
+                      <input id="" class="span2" type="text" name="">
+                    </label>
+                  </div>
+                  <div style="clear:both"></div>
+                  <div class="box4">
+                    <label>Who Deliver Bill? <br>
+                      <select id="stackedSelect" name="stackedSelect" class="span2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="box4">
+                    <label>Due Date <br>
+                      <input id="" class="span2" type="text" name="">
+                    </label>
+                  </div>
+                  <p class="blue-notice">payment made via bank account will take 3-4 business days to arrive. Debt and credit card payment take 1 day</p>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </article>
+          </section>
+        </div>
+        <div>
+          <div class="clear"></div>
+          <div class="box-blue-container">
+            <table>
+              <thead>
+                <tr class="blue-heading">
+                  <th>Who Participated ?</th>
+                  <th>Split</th>
+                  <th colspan="2">Ammount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><div  class="pull-left" style="margin-right:5px;"><img src="images/derek.jpg" width="48" height="48"></div>
+                    <span class="blue-active">Derek</span></th>
+                  <th>Even<br>
+                    [<span class="blue-active">Change</span>]</th>
+                  <th ><input type="text" name="textfield" id="textfield" class="span3"></th>
+                  <th ><input type="submit" name="button" id="button" value="Submit"></th>
+                </tr>
+                <tr>
+                  <th><div  class="pull-left" style="margin-right:5px;"><img src="images/derek.jpg" width="48" height="48"></div>
+                    <select id="stackedSelect2" name="stackedSelect2" class="span4">
+                      <option>Select Roomates</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select></th>
+                  <th>Even<br>
+                    [<span class="blue-active">Change</span>]</th>
+                  <th ><input type="text" name="textfield2" id="textfield2" class="span3"></th>
+                  <th ><input type="submit" name="button2" id="button2" value="Submit"></th>
+                </tr>
+                <tr>
+                  <th> <div  class="pull-left" style="margin-right:5px;"><img src="images/add-user.png" width="29" height="28"></div>
+                    <a href="#">Add Roommates</a></th>
+                  <th ><a href="#"></a> </th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="clear"></div>
+          <div style="float:right">
+            <button class="btn" style="float:left; margin-right:10px;">Cancel</button>
+            <button class="btn danger" style="float:left">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---Sidebar and content end here-->
+  </div>
+  <div class="clear"></div>
+</div>
+<!-- /container -->
+<footer id="home-footer">
+  <div class="container">
+    <div class="row">
+      <ul class="unstyled">
+        <li><a href="#"> About Roomeo</a></li>
+        <li><a href="#"> Why Roomeo\</a></li>
+        <li><a href="#"> Fees<br>
+          </a></li>
+      </ul>
+      <ul class="unstyled">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#"> Security</a></li>
+        <li><a href="#"> Company </a></li>
+      </ul>
+      <ul class="unstyled">
+        <li><a href="#">About</a></li>
+        <li><a href="#"> Jobs</a></li>
+        <li><a href="#"> Press</a></li>
+      </ul>
+      <ul class="unstyled">
+        <li><a href="#">Contact Us </a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+      <ul id="social-icons" class="unstyled">
+      
+          <h3 style="color:#fff; float:left">Follow Us</h3>
+
+
+        <li id="twitter"><a href="#"></a></li>
+        <li id="blog"><a href="#"></a></li>
+        <li id="facebook"><a href="#"></a></li>
+        <li>© 2011 Roomeo  Inc. All rights Reserved </li>
+      </ul>    </div>
+  </div>
+</footer>
+</body>
+</html>

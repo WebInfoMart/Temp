@@ -11,12 +11,8 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/style_sh.css">
-<script src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
-<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-alerts.js"></script>
-<script type="text/javascript" src="js/bootstrap-modal.js"></script>
 </head>
+
 <body>
 	<header>
 		<div class="header_bar">	
@@ -64,7 +60,7 @@
 			</div>
 		</div>
 	</header>
-	<div>
+<div>
 		<div class="body_bar"></div>
 		<div class="body_header"></div>
 		<div class="body_container">
@@ -73,66 +69,84 @@
 					<div class="float_l span15 margin_zero sidebar">
 						<div class="margin_t50 single_sidebar">
 							<ul>
-								<li class="active_side"><div class="float_l"><img src="images/account.png" class="margin_l"></div><div class="float_r span79 margin_zero">Account Information</div><div class="clearfix"></div></li>
-								<li><div class="float_l"><img src="images/update.png" class="margin_l"></div><div class="float_r span79 margin_zero">Update Password</div><div class="clearfix"></div></li>
-								<li><div class="float_l"><img src="images/key.png" class="margin_l"></div><div class="float_r span79 margin_zero">Update E-mail</div><div class="clearfix"></div></li>
+								<li class="active_side"><div class="float_l"><img src="../images/account.png" class="margin_l21"></div><div class="float_r span79 margin_zero">Account Information</div><div class="clearfix"></div></li>
+								<li><div class="float_l"><img src="../images/update.png" class="margin_l21"></div><div class="float_r span79 margin_zero">Update Password</div><div class="clearfix"></div></li>
+								<li><div class="float_l"><img src="../images/key.png" class="margin_l21"></div><div class="float_r span79 margin_zero">Update E-mail</div><div class="clearfix"></div></li>
 							</ul>
 						</div>
 					</div>
 					<div class="float_r span111">
 						<div class="row">
 							<div class="span71">
-								<form class="form-horizontal form_data">
+								<form class="form-horizontal form_data" action="user_profile_update" method="post" enctype="multipart/form-data">
 									<h2 class="profile_heading">Update Account Information</h2>
 									<div class="profile_border">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus, olor sit amet, consectetur adipiscing dolor ut posuere faucibus, nibh neque sollicitudin olor sit amet, consectetur adipiscing enim, non consectetur lorem odio eu lectus.
 										<div class="contact_box margin_t">
-											<div class="margin_l21 margin_t">
-												<h3>Personal Information <img src="images/ques_layer.png"></h3>
+											<div class="margin_l21 margin_t1">
+												<h3>Personal Information <img src="../images/ques_layer.png"></h3>
 													<div class="form-horizontal form_data margin1">
 														<div>
-															<label class="control-label padding_alpha"><img src="images/user_model.png" class="profile_img_width"></label>
+															<label class="control-label padding_alpha">
+															<?php
+															if($fetch_profile['user_pic_path'] != '')
+															{
+																echo "<img class='profile_img_width' src='".base_url()."uploads/".$fetch_profile['user_pic_path']."'/>";
+															}
+															else{
+															?>
+															<img class='profile_img_width' src="../images/user_model.png"></label>
+															<?php } ?>
 															<div class="controls contact_box_content">
-																<button class="btn margin_l button_profile" href="#">Choose File</button><span class="margin_l change_profile">Change your pic</span>
+															
+																<input type="file" name="userfile" class="button_profile" /><div class="span15 margin_zero change_profile">Change your pic</div>
 															</div>
 															<div class="clearfix"></div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Full Name *</label>
 															<div class="controls contact_box_content">
-																<input type="text" class="input_xxxx-large" id="input01">
+																<input type="text" class="input_xxxx-large" value="<?php echo $fetch_profile['full_name']; ?>" name="full_name" id="full_name" placeholder="Fullname">
 															</div>
 														</div>
 														<div class="control-group">
 															<div class="float_l span15 margin_zero"><h4>Gender</h4></div>
-																<div class="float_l span2 margin_l"><input type="radio" name="sex" value="male" /> Male
-																	<input type="radio" name="sex" value="female" style="margin-left:20px;"/> Female</div>
+															
+																<div class="float_l span2 margin_l"><input type="radio" name="sex" value="male" <?php if($fetch_profile['gender'] == "male") { echo 'checked'; } ?> /> Male
+																	<input type="radio" name="sex" value="female" style="margin-left:20px;" <?php if($fetch_profile['gender'] == "female") { echo 'checked'; } ?> /> Female</div>
 																<div class="clearfix"></div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Country *</label>
 															<div class="controls select_button">
-																<select id="select01">
-																	<option>India</option>
-																	<option>Ireland</option>
-																	<option>Canada</option>
-																	<option>United Kingdom</option>
-																	<option>United States</option>
+															<?php $user_selected_country = $fetch_profile['country_id']; 
+															$selected ='';
+															?>
+																<select name="country">
+																<?php foreach($country as $countries) {
+																if($countries['country_id'] == $user_selected_country) { $selected ='selected';} else { $selected =''; }
+																?>
+																	<option value="<?php echo $countries['country_id'] ;?>" <?php echo $selected; ?> ><?php echo $countries['country_name']; ?></option>
+																<?php } ?>
 																</select>
 															</div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Birth Date *</label>
 															<div class="controls contact_box_content">
-																<input type="text" class="input-small margin_all" id="input01">/
-																<input type="text" class="input-small margin_all" id="input01">/
-																<input type="text" class="input-small margin_all" id="input01">
+															<?php
+															$dob = $fetch_profile['dob'];
+															$dob_explode = explode("-",$dob);
+															?>
+																<input type="text" class="input-small margin_all" value="<?php echo $dob_explode[0] ?>" name="year" id="year" placeholder="Year">
+																<input type="text" class="input-small margin_all" value="<?php echo $dob_explode[1] ?>" name="month" id="month" placeholder="Month">
+																<input type="text" class="input-small margin_all" value="<?php echo $dob_explode[2] ?>" name="date" id="date" placeholder="Date">
 															</div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Alias *</label>
 															<div class="controls contact_box_content">
-																<input type="text" class="input_xxxx-large" id="input01">
+																<input type="text" class="input_xxxx-large" value="<?php echo $fetch_profile['alias_name']; ?>" name="alias_name" id="alias_name" placeholder="Alias name">
 															</div>
 														</div>
 													</div>
@@ -147,19 +161,19 @@
 														<div class="control-group">
 															<label class="control-label">Home Address *</label>
 															<div class="controls contact_box_content">
-																<input type="text" class="input_xxxx-large" id="input01">
+																<input type="text" class="input_xxxx-large" value="<?php echo $fetch_profile['home_address']; ?>" name="home_adrs" id="home_adrs" placeholder="Home adress">
 															</div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Mobile Number *</label>
 															<div class="controls contact_box_content">
-																<input type="text" class="input_xxxx-large" id="input01">
+																<input type="text" class="input_xxxx-large" value="<?php echo $fetch_profile['mob_no']; ?>" name="mob_no" id="mob_no" placeholder="Mobile number">
 															</div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Alternate Email *</label>
 															<div class="controls contact_box_content">
-																<input type="text" class="input_xxxx-large" id="input01">
+																<input type="text" class="input_xxxx-large" value="<?php echo $fetch_profile['alt_email']; ?>" name="alt_email" id="alt_email" placeholder="Alt email">
 															</div>
 														</div>
 													</div>
@@ -172,25 +186,30 @@
 														<div class="control-group">
 															<label class="control-label">Current Qualification *</label>
 															<div class="controls select_button">
-																<select id="select01">
-																	<option>something</option>
-																	<option>1</option>
-																	<option>2</option>
-																	<option>3</option>
-																	<option>4</option>
-																	<option>5</option>
+															<?php $curent_quali = $fetch_profile['curr_educ_level']; ?>
+																<select name="curnt_quali">
+																<?php
+																foreach($educ_level as $curnt_educ)
+																{
+																if($curnt_educ['prog_edu_lvl_id'] == $curent_quali) { $selected ='selected';} else { $selected =''; }
+																?>
+																	<option value="<?php echo $curnt_educ['prog_edu_lvl_id']; ?>" <?php echo $selected; ?> ><?php echo $curnt_educ['educ_level']; ?></option>
+																<?php } ?>
 																</select>
 															</div>
 														</div>
 														<div class="control-group">
 															<label class="control-label">Area Of Interest *</label>
 															<div class="controls select_button">
-																<select id="select01">
-																	<option>something</option>
-																	<option>2</option>
-																	<option>3</option>
-																	<option>4</option>
-																	<option>5</option>
+															<?php $intrest_area_profile = $fetch_profile['prog_parent_id']; ?>
+																<select name="area_intrst">
+																	<?php
+																foreach($area_interest as $area)
+																{
+																if($area['prog_parent_id'] == $intrest_area_profile) { $selected ='selected';} else { $selected =''; }
+																?>
+																	<option value="<?php echo $area['prog_parent_id']; ?>" <?php echo $selected; ?> > <?php echo $area['program_parent_name']; ?></option>
+																<?php } ?>
 																</select>
 															</div>
 														</div>
@@ -199,13 +218,14 @@
 										</div>	
 										<div class="clearfix"></div>
 										<div class="margin_t">
-											<button class="btn btn-primary" href="#">Update</button>
+										<input type="submit" class="btn btn-primary" value="Update"/>
+											<!--<button class="btn btn-primary" href="#">Update</button>-->
 										</div>
 									</div>
 								</form>
 							</div>
 							<div class="span15">
-									<img src="images/banner_img.png">
+									<img src="../images/banner_img.png">
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -214,53 +234,3 @@
 			</div>
 		</div>
 	</div>
-	<footer>
-		<div class="container">
-			<div class="margin">
-				<div class="footer margin_delta">
-					<h4 class="white">Colleges</h4>
-					<ul>
-						<li><a href="">Medical Colleges</a></li>
-						<li><a href="">Engineering Colleges</a></li>
-						<li><a href="">Management Colleges</a></li>
-						<li><a href="">ABC Colleges</a></li>
-						<li><a href="">DEF Colleges</a></li>
-						<li><a href="">GHI Colleges</a></li>
-					</ul>
-				</div>
-				<div class="footer">
-					<h4 class="white">Destinations</h4>
-					<ul>
-						<li><a href="">USA</a></li>
-						<li><a href="">Canada</a></li>
-						<li><a href="">UK</a></li>
-						<li><a href="">Australia</a></li>
-						<li><a href="">New Zealand</a></li>
-						<li><a href="">Bangladesh</a></li>
-					</ul>
-				</div>
-				<div class="footer">
-					<h4 class="white">Reach Us</h4>
-						<div>
-							ABC, XYZ Building,<br />
-							Hyderabad,<br />
-							Arunachal Pradesh,<br />
-							India<br />
-							Email: meet@meetuniversities.com<br />
-							Call: +91-0000000000
-						</div>
-				</div>
-				<div class="footer margin_beta">
-					<h4 class="white">Follow us</h4>
-						<div>
-							<img src="images/face.png" />
-							<img src="images/in.png" />
-							<img src="images/twitter.png" />
-						</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<div class="body_footer"></div>
-</body>
-</html>
